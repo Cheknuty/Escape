@@ -1,0 +1,67 @@
+.section {
+    padding-top: 20px;
+    padding-bottom: 157px;
+    background-image: url(../../img/header/sec-bgi.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+@include retina-bgi {
+    .section {
+        background-image: url(../../img/header/sec-bgi@2x.jpg);
+    }
+}
+
+.section__box {
+    padding-top: 131px;
+    
+    text-align: center;
+}
+
+.section__title {
+    @include font-style($font-lora400, 50px, 51px, #FFF) {
+        margin-top: 0;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+    }
+}
+
+.section__subtitle {
+    @include font-style($font-oxygen400, 17px, 20px, rgba(255, 255, 255, 0.63)) {
+        margin-top: 0;
+        margin-bottom: 31px;
+    }
+}
+
+.section__button {
+    @include font-style($font-oxygen400, 13px, 20px, #FFF){
+        display: inline-block;
+        padding: 12px 31px;
+        text-decoration: none;
+        background-color: #DD783F;
+        border-radius: 3px;
+    }
+}
+
+/* RESPONSIVE */
+@include max(520px) {
+    .section__title {
+        @include font-style($font-lora400, 40px, 41px, #FFF) {
+            letter-spacing: 1px;
+        }
+    }
+}
+
+@include max(400px) {
+    .section__title {
+        @include font-style($font-lora400, 30px, 35px, #FFF) {
+            margin-bottom: 15px;
+            letter-spacing: normal;
+        }
+    }
+
+    .section__subtitle {
+        margin-bottom: 25px;
+        font-size: 15px;
+    }
+}   

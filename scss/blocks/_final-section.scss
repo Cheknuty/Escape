@@ -1,0 +1,65 @@
+.final-section {
+    background-image: url(../../img/footer/IMAGE.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 81px;
+}
+
+@include retina-bgi {
+    .final-section {
+        background-image: url(../../img/footer/IMAGE@2x.jpg);
+    }
+}
+
+.final-section__box {
+    margin-bottom: 20px;
+}
+
+.final-section__form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 90px;
+}
+
+.final-section__input {
+    width: 375px;
+    padding: 17px 18px 17px 35px;
+    background: #FFFFFF;
+    border: none;
+    border-radius: 3px 0px 0px 3px;
+}
+
+.final-section__input::placeholder, .final-section__button {
+    @include font-style($font-roboto400, 12px, 14px, #000)
+}
+
+.final-section__input::placeholder {
+    color: #817F83;
+}
+
+.final-section__button {
+    border: none;
+    background: rgba(255, 255, 255, 0.28);
+    border-radius: 0px 3px 3px 0px;
+    color: #F8F8F8;
+    padding: 19px 43px 19px 44px;
+}
+
+/* RESPONSIVE */
+@include max(380px) {
+    .final-section__form {
+        flex-direction: column;
+    }
+
+    .final-section__input {
+        max-width: 270px;
+        margin-bottom: 20px;
+        border-radius: 3px;
+    }
+
+    .final-section__button {
+        border-radius: 3px;
+    }
+}

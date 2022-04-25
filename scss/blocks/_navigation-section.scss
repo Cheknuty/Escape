@@ -1,0 +1,25 @@
+.navigation-section {
+    padding: 22px 0;
+    background-color: #fff;
+}
+
+.navigation-section__list {
+    @include list-unstyled;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: -15px;
+    flex-wrap: wrap;
+}
+
+.navigation-section__item {
+    margin: 0 auto;
+    padding: 0 12px;
+    margin-bottom: 15px;
+}
+
+.navigation-section__item-link {
+    @include font-style($font-lora400, 14px, 20px, #768088) {
+        text-decoration: none;
+    }
+}
